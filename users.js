@@ -91,10 +91,9 @@ function getNames(people) {
 };
 console.log(getNames(people));
 
-function getEyeColor(people) {
-  let brown = people.filter(human => human.eyeColor === 'brown');
-  let blue = people.filter(human => human.eyeColor === 'blue');
-  let green = people.filter(human => human.eyeColor === 'green');
-  return brown, blue, green
-};
-console.log(getEyeColor(people));
+function getEyeColor(people, color) {
+  return people.filter(human => human.eyeColor === color);
+}
+console.log('Сині очі:', getEyeColor(people, 'blue'));
+console.log('Зелені очі:', getEyeColor(people, 'green'));
+console.log('Коричневі очі:', getEyeColor(people, 'brown'));
