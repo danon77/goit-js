@@ -85,8 +85,8 @@ const people = [
   },
 ];
 
-function getNames(p) {
-  return p.forEach(h => console.log(h.name));
+function getNames(people) {
+  return people.forEach(human => console.log(human.name));
 };
 
 console.log(getNames(people));
