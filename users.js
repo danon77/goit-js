@@ -82,7 +82,7 @@ const people = [
     skills: ['lorem', 'veniam', 'culpa'],
     gender: 'female',
     age: 39,
-  },
+  }
 ];
 
 function getNames(people) {
