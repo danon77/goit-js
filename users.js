@@ -86,7 +86,15 @@ const people = [
 ];
 
 function getNames(people) {
-  return people.forEach(human => console.log(human.name));
+  let onlyNames = people.map(human => human.name);
+  return onlyNames
 };
-
 console.log(getNames(people));
+
+function getEyeColor(people) {
+  let brown = people.filter(human => human.eyeColor === 'brown');
+  let blue = people.filter(human => human.eyeColor === 'blue');
+  let green = people.filter(human => human.eyeColor === 'green');
+  return brown, blue, green
+};
+console.log(getEyeColor(people));
