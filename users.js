@@ -97,3 +97,15 @@ function getEyeColor(people, color) {
 console.log('Сині очі:', getEyeColor(people, 'blue'));
 console.log('Зелені очі:', getEyeColor(people, 'green'));
 console.log('Коричневі очі:', getEyeColor(people, 'brown'));
+
+function getByGender(people, gender) {
+  let arrOfPeople = people.filter(human => human.gender === gender);
+  return arrOfPeople.map(human => human.name)
+};
+console.log(getByGender(people, 'male'));
+console.log(getByGender(people, 'female'));
+
+function onlyNotActive(people) {
+  return people.filter(human => !human.isActive);
+};
+console.log(onlyNotActive(people));
