@@ -109,3 +109,8 @@ function onlyNotActive(people) {
   return people.filter(human => !human.isActive);
 };
 console.log(onlyNotActive(people));
+
+function getByEmail(people, email) {
+  return people.find(human => human.email === email);
+};
+console.log(getByEmail(people, 'elmahead@omatom.com'));
