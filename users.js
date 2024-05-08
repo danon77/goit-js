@@ -85,12 +85,18 @@ const people = [
   }
 ];
 
+console.log('Завдання 1');
 function getNames(people) {
   let onlyNames = people.map(human => human.name);
   return onlyNames
 };
 console.log(getNames(people));
 
+
+console.log('<---------------------------->');
+
+
+console.log('Завдання 2');
 function getEyeColor(people, color) {
   return people.filter(human => human.eyeColor === color);
 }
@@ -98,6 +104,11 @@ console.log('Сині очі:', getEyeColor(people, 'blue'));
 console.log('Зелені очі:', getEyeColor(people, 'green'));
 console.log('Коричневі очі:', getEyeColor(people, 'brown'));
 
+
+console.log('<---------------------------->');
+
+
+console.log('Завдання 3');
 function getByGender(people, gender) {
   let arrOfPeople = people.filter(human => human.gender === gender);
   return arrOfPeople.map(human => human.name)
@@ -105,11 +116,21 @@ function getByGender(people, gender) {
 console.log(getByGender(people, 'male'));
 console.log(getByGender(people, 'female'));
 
+
+console.log('<---------------------------->');
+
+
+console.log('Завдання 4');
 function onlyNotActive(people) {
   return people.filter(human => !human.isActive);
 };
 console.log(onlyNotActive(people));
 
+
+console.log('<---------------------------->');
+
+
+console.log('Завдання 5');
 function getByEmail(people, email) {
   return people.find(human => human.email === email);
 };
