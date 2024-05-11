@@ -85,53 +85,108 @@ const people = [
   }
 ];
 
+
 console.log('Завдання 1');
 function getNames(people) {
-  let onlyNames = people.map(human => human.name);
-  return onlyNames
+  return people.map(human => human.name);
 };
-console.log(getNames(people));
+console.log('All names:', getNames(people));
 
 
-console.log('<---------------------------->');
+console.log('\n\n\n');
 
 
 console.log('Завдання 2');
 function getEyeColor(people, color) {
   return people.filter(human => human.eyeColor === color);
 }
-console.log('Сині очі:', getEyeColor(people, 'blue'));
-console.log('Зелені очі:', getEyeColor(people, 'green'));
-console.log('Коричневі очі:', getEyeColor(people, 'brown'));
+console.log('Blue eyes:', getEyeColor(people, 'blue'));
+console.log('Green eyes:', getEyeColor(people, 'green'));
+console.log('Brown eyes:', getEyeColor(people, 'brown'));
 
 
-console.log('<---------------------------->');
+console.log('\n\n\n');
 
 
 console.log('Завдання 3');
 function getByGender(people, gender) {
-  let arrOfPeople = people.filter(human => human.gender === gender);
-  return arrOfPeople.map(human => human.name)
+  return people.filter(human => human.gender === gender).map(human => human.name);
 };
-console.log(getByGender(people, 'male'));
-console.log(getByGender(people, 'female'));
+console.log('Male:', getByGender(people, 'male'));
+console.log('Female:', getByGender(people, 'female'));
 
 
-console.log('<---------------------------->');
+console.log('\n\n\n');
 
 
 console.log('Завдання 4');
 function onlyNotActive(people) {
   return people.filter(human => !human.isActive);
 };
-console.log(onlyNotActive(people));
+console.log('Not active people:', onlyNotActive(people));
 
 
-console.log('<---------------------------->');
+console.log('\n\n\n');
 
 
 console.log('Завдання 5');
 function getByEmail(people, email) {
   return people.find(human => human.email === email);
 };
-console.log(getByEmail(people, 'elmahead@omatom.com'));
+console.log('By email:', getByEmail(people, 'elmahead@omatom.com'));
+
+
+console.log('\n\n\n');
+
+
+console.log('Завдання 6');
+function filterByAge(people, min, max) {
+  return people.filter(human => human.age >= min && human.age <= max);
+};
+console.log('From 18 to 27:', filterByAge(people, 18, 27));
+
+
+console.log('\n\n\n');
+
+
+console.log('Завдання 7');
+function sumBalance(people) {
+  let total = 0;
+  people.forEach(human => total += human.balance);
+  return total;
+};
+console.log('Total balance:', sumBalance(people));
+
+
+console.log('\n\n\n');
+
+
+console.log('Завдання 8');
+function filterByFriend(people, friend) {
+  return people.filter(human => human.friends.includes(friend)).map(human => human.name);
+};
+console.log("Goldie Gentry's friends:", filterByFriend(people, 'Goldie Gentry'));
+
+
+console.log('\n\n\n');
+
+
+console.log('Завдання 9');
+function numOfFriends(people, num) {
+  return people.filter(human => human.friends.length === num).map(human => human.name);
+}
+console.log('People with 2 friends:', numOfFriends(people, 2));
+
+
+console.log('\n\n\n');
+
+
+console.log('Завдання 10');
+function getAllSkills(people) {
+  let totalSkills = [];
+  people.forEach(human => {
+    human.skills.forEach(skill => !totalSkills.includes(skill) ? totalSkills.push(skill) : null);
+  });
+  return totalSkills;
+};
+console.log('Total skills:', getAllSkills(people));
